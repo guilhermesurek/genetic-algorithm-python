@@ -32,7 +32,7 @@ class GAManager:
                 results.append(GA.get_results())
             # Report Result
             try:
-                msg = f"GA Type: {kw_args[i]['ga_type']} | Population Size: {kw_args[i]['population_size']} | Mutation Prob: {kw_args[i]['mutation_prob']} | Crossover Prob: {kw_args[i]['cross_prob']} | Max Iter.: {kw_args[i]['max_it']}"
+                msg = f"GA Type: {self.__kw_args[i]['ga_type']} | Population Size: {self.__kw_args[i]['population_size']} | Mutation Prob: {self.__kw_args[i]['mutation_prob']} | Crossover Prob: {self.__kw_args[i]['cross_prob']} | Max Iter.: {self.__kw_args[i]['max_it']}"
                 print(msg)
             except:
                 print("Fail to read keyword arguments.")
