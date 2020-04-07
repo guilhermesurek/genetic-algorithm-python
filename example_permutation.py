@@ -1,3 +1,5 @@
+import geneticalgorithm
+
 ##How To setup your our GA for Permutation
 # Basically your need to overwrite the eval function, the function that calculates the distance of two elements in the set
 # i.e. distance of two cities. You can calculate Euclidean distance or any kind of distance you want, you can use your own
