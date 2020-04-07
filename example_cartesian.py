@@ -1,3 +1,5 @@
+import geneticalgorithm
+
 ##How To setup your our GA for Cartesian
 # Basically your need to overwrite the eval function, the function that calculates the value for the individual
 class MyGACart(GeneticAlgorithm):
