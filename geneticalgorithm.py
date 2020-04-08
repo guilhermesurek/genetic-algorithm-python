@@ -43,16 +43,20 @@ class GAManager:
             rmedian = np.median([res[2] for res in results])
             rstd = np.std([res[2] for res in results])
             print(f"Best: {rmin} | Worst: {rmax} | Mean: {rmean} | Meadian: {rmedian} | Std: {rstd}")
-            print(40*"-")
+            print(80*"-")
             fes_mean = np.mean([res[1] for res in results])
             fes_std = np.std([res[1] for res in results])
             # Append Final Results
             final_results.append([rmin, rmax, rmean, rmedian, rstd, fes_mean, fes_std])
         # Final Report
+        print(f"  ID    |  Pop Size  |  Mutation Prob  |  Crossover Prob  |  Max Iter  |  Runs  ")
+        for k in range(len(final_results)):
+            print("  {0:03d}   |    {1:05d}   |     {2:6.3f}      |      {3:6.3f}      |    {4:05d}   |  {5:04d}  ".format(k, self.__kw_args[i]['population_size'], self.__kw_args[i]['mutation_prob'], self.__kw_args[i]['cross_prob'], self.__kw_args[i]['max_it'], self.__run))
+        print(84*"-")
         print(f"  ID    |      Best      |     Worst    |      Mean    |    Meadian   |       Std   ")
         for k in range(len(final_results)):
             print("  {0:03d}   |  {1:12.6f}  | {2:12.6f} | {3:12.6f} | {4:12.6f} | {5:12.6f}".format(k, final_results[k][0], final_results[k][1], final_results[k][2], final_results[k][3], final_results[k][4]))
-        print(40*"-")
+        print(84*"-")
         print(f"  ID    | Function Evaluations ")
         for k in range(len(final_results)):
             print("  {0:03d}   |  {1:9.0f}+{2:.0f}".format(k, final_results[k][5], final_results[k][6]))
