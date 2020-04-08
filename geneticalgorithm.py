@@ -51,7 +51,7 @@ class GAManager:
         # Final Report
         print(f"  ID    |  Pop Size  |  Mutation Prob  |  Crossover Prob  |  Max Iter  |  Runs  ")
         for k in range(len(final_results)):
-            print("  {0:03d}   |    {1:05d}   |     {2:6.3f}      |      {3:6.3f}      |    {4:05d}   |  {5:04d}  ".format(k, self.__kw_args[i]['population_size'], self.__kw_args[i]['mutation_prob'], self.__kw_args[i]['cross_prob'], self.__kw_args[i]['max_it'], self.__run))
+            print("  {0:03d}   |    {1:05d}   |     {2:6.3f}      |      {3:6.3f}      |    {4:05d}   |  {5:04d}  ".format(k, self.__kw_args[k]['population_size'], self.__kw_args[k]['mutation_prob'], self.__kw_args[k]['cross_prob'], self.__kw_args[k]['max_it'], self.__run))
         print(84*"-")
         print(f"  ID    |      Best      |     Worst    |      Mean    |    Meadian   |       Std   ")
         for k in range(len(final_results)):
