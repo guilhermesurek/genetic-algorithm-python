@@ -53,9 +53,9 @@ class GAManager:
         for k in range(len(final_results)):
             print("  {0:03d}   |    {1:05d}   |     {2:6.3f}      |      {3:6.3f}      |    {4:05d}   |  {5:04d}  ".format(k, self.__kw_args[k]['population_size'], self.__kw_args[k]['mutation_prob'], self.__kw_args[k]['cross_prob'], self.__kw_args[k]['max_it'], self.__run))
         print(84*"-")
-        print(f"  ID    |      Best      |     Worst    |      Mean    |    Meadian   |       Std   ")
+        print(f"  ID    |        Best        |       Worst      |        Mean      |      Meadian     |         Std     ")
         for k in range(len(final_results)):
-            print("  {0:03d}   |  {1:12.6f}  | {2:12.6f} | {3:12.6f} | {4:12.6f} | {5:12.6f}".format(k, final_results[k][0], final_results[k][1], final_results[k][2], final_results[k][3], final_results[k][4]))
+            print("  {0:03d}   |  {1:16.6f}  | {2:16.6f} | {3:16.6f} | {4:16.6f} | {5:16.6f}".format(k, final_results[k][0], final_results[k][1], final_results[k][2], final_results[k][3], final_results[k][4]))
         print(84*"-")
         print(f"  ID    | Function Evaluations ")
         for k in range(len(final_results)):
